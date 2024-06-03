@@ -4,8 +4,8 @@ import 'package:expensor/src/res/routes/routes.dart';
 import 'package:expensor/src/view_model/controller/signup_controller.dart';
 import 'package:expensor/src/view/sign_up/components/signup_options.dart';
 
-import 'appbar.dart';
-import 'button.dart';
+import '../../common_widgets/appbar.dart';
+import '../../common_widgets/button.dart';
 import 'input_form.dart';
 
 class SignupBody extends StatelessWidget {

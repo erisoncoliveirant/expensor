@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../res/app_color.dart';
+import '../../res/app_color.dart';
 
 class IconContainer extends StatelessWidget {
   final Widget widget;

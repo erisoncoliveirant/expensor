@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:expensor/src/view/common%20widgets/back_button.dart';
+import 'package:expensor/src/view/common_widgets/back_button.dart';
 
 class SignUpBar extends StatelessWidget {
   const SignUpBar({super.key});

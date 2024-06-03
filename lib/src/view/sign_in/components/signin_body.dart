@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:expensor/src/res/routes/routes.dart';
 import 'package:expensor/src/view_model/controller/signin_controller.dart';
 import 'package:expensor/src/view/sign_in/components/signin_input_form.dart';
-import '../../sign_up/components/button.dart';
+import '../../common_widgets/button.dart';
 import '../../sign_up/components/signup_options.dart';
 
 class SignInBody extends StatelessWidget {
