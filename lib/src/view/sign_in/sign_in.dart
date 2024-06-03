@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:expensor/src/view/sign_in/components/signin_body.dart';
 
-
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
   @override

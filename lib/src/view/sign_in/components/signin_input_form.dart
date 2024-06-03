@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:expensor/src/view_model/controller/signin_controller.dart';
-import '../../sign_up/components/text_field.dart';
+
+import '../../common_widgets/text_field.dart';
 
 class SignInForm extends StatelessWidget {
    SignInForm({super.key});
@@ -25,13 +26,11 @@ class SignInForm extends StatelessWidget {
             textAlign: TextAlign.left,
           ),
         ),
-        const SizedBox(
-          height: 30,
-        ),
+        const SizedBox(height: 30,),
         Obx(() => InputField(
-          onTap: () => controller.onFocusEmail(),
+          onTap: controller.onFocusEmail,
           focus: controller.emailFocus.value,
-          hint: "mail@gmail.com",
+          hint: "Email",
           controller: controller.email.value,
           correct: controller.correctEmail.value,
           onChange: controller.validateEmail,
@@ -39,15 +38,13 @@ class SignInForm extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Obx(
-              () => InputField(
-            onTap: () => controller.onFocusPassword(),
+        Obx(() => InputField(
+            onTap: controller.onFocusPassword,
             focus: controller.passwordFocus.value,
             hint: "Pick a strong password",
             controller: controller.password.value,
             hideText: controller.showPassword.value,
-            onChange: () {
-            },
+            onChange: () {},
             showPass: () => controller.showPassword.toggle(),
           ),
         ),

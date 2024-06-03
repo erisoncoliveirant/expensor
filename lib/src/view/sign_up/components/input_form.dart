@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../view_model/controller/signup_controller.dart';
-import 'text_field.dart';
+import '../../common_widgets/text_field.dart';
 
 class InputForm extends StatelessWidget {
    InputForm({super.key});
@@ -48,12 +48,12 @@ class InputForm extends StatelessWidget {
           height: 10,
         ),
         Obx(() => InputField(
-            onTap: () => controller.onFocusEmail(),
-            focus: controller.emailFocus.value,
-            hint: "tim@gmail.com",
-            controller: controller.email.value,
-        correct: controller.correctEmail.value,
-        onChange: controller.validateEmail,
+          onTap: () => controller.onFocusEmail(),
+          focus: controller.emailFocus.value,
+          hint: "tim@gmail.com",
+          controller: controller.email.value,
+          correct: controller.correctEmail.value,
+          onChange: controller.validateEmail,
         )),
         const SizedBox(
           height: 20,
@@ -68,16 +68,14 @@ class InputForm extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Obx(
-              () => InputField(
+        Obx(() => InputField(
             onTap: () => controller.onFocusPassword(),
             focus: controller.passwordFocus.value,
             hint: "Pick a strong password",
             controller: controller.password.value,
-                hideText: controller.showPassword.value,
-                onChange: () {
-                },
-                showPass: () => controller.showPassword.toggle(),
+            hideText: controller.showPassword.value,
+            onChange: () {},
+            showPass: () => controller.showPassword.toggle(),
           ),
         ),
         const SizedBox(

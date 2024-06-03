@@ -5,13 +5,13 @@ import '../../Data/network/firebase/firebase_services.dart';
 import '../../utils/utils.dart';
 
 class SignInController extends GetxController{
-  RxBool emailFocus=false.obs;
-  RxBool passwordFocus=false.obs;
-  RxBool correctEmail=false.obs;
-  RxBool showPassword=true.obs;
-  RxBool loading=false.obs;
-  final email=TextEditingController().obs;
-  final password=TextEditingController().obs;
+  RxBool emailFocus = false.obs;
+  RxBool passwordFocus = false.obs;
+  RxBool correctEmail = false.obs;
+  RxBool showPassword = true.obs;
+  RxBool loading = false.obs;
+  final email = TextEditingController().obs;
+  final password = TextEditingController().obs;
 
 
   void loginAccount(){
