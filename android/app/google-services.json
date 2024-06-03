@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "596861701516",
+    "project_id": "expensor-8788c",
+    "storage_bucket": "expensor-8788c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596861701516:android:dc10722c806f2f0a3d5aa9",
+        "android_client_info": {
+          "package_name": "com.example.expensor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVSE1wZ_sVON6esGHCM6hJVDP0PL5Xglw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
