@@ -26,34 +26,22 @@ class Background extends StatelessWidget {
           Positioned(
             top: 0,
             right: 0,
-            child: Image.asset(
-                "images/auth/top2.png",
-                width: size.width
-            ),
+            child: Image.asset("images/auth/top2.png", width: size.width),
           ),
           Positioned(
             top: 50,
             right: 30,
-            child: Image.asset(
-                "images/auth/main.png",
-                width: size.width * 0.35
-            ),
+            child: Image.asset("images/auth/main.png", width: size.width * 0.35),
           ),
           Positioned(
             bottom: 0,
             right: 0,
-            child: Image.asset(
-                "images/auth/bottom1.png",
-                width: size.width
-            ),
+            child: Image.asset("images/auth/bottom1.png", width: size.width),
           ),
           Positioned(
             bottom: 0,
             right: 0,
-            child: Image.asset(
-                "images/auth/bottom2.png",
-                width: size.width
-            ),
+            child: Image.asset("images/auth/bottom2.png", width: size.width),
           ),
           child
         ],

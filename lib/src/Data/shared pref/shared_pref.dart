@@ -1,9 +1,9 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class UserPref{
+class UserPref {
   static Future<void> setUser(String name,String email,String password,String node,String token) async {
 
-    SharedPreferences pref=await SharedPreferences.getInstance();
+    SharedPreferences pref = await SharedPreferences.getInstance();
     pref.setString('NAME', name);
     pref.setString('EMAIL', email);
     pref.setString('PASSWORD', password);
@@ -13,7 +13,7 @@ class UserPref{
   }
 
   static Future<Map<String,String>> getUser() async {
-    SharedPreferences pref=await SharedPreferences.getInstance();
+    SharedPreferences pref = await SharedPreferences.getInstance();
     return {
       'NAME' : pref.getString('NAME')!,
       'EMAIL' : pref.getString('EMAIL')!,

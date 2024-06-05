@@ -1,3 +1,4 @@
+import 'package:expensor/src/common/background.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:expensor/src/res/routes/routes.dart';
@@ -15,59 +16,40 @@ class SignupBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 30,
-            ),
-            const SignUpBar(),
-            const SizedBox(
-              height: 50,
-            ),
-            const Text(
-              'Sign up with one of the following options.',
-              style: TextStyle(color: Colors.grey),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const SignUpOptions(),
-            InputForm(),
-            Obx(
-              () => AccountButton(
-                text: "Create Account",
-                loading: controller.loading.value,
-                onTap: () {
-                  controller.createAccount();
-                },
+    return Background(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              InputForm(),
+              const SizedBox(height: 10,),
+              Obx(() => AccountButton(
+                  text: "Create Account",
+                  loading: controller.loading.value,
+                  onTap: controller.createAccount,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Align(
-                alignment: Alignment.center,
-                child: GestureDetector(
-                  onTap: () => Get.toNamed(Routes.signInScreen),
-                  child: RichText(
-                      text: const TextSpan(children: [
-                    TextSpan(
-                        text: 'Already have an account? ',
-                        style: TextStyle(
-                          color: Colors.grey,
-                        )),
-                    TextSpan(
-                        text: 'Login',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ))
-                  ])),
-                ))
-          ],
+              const SizedBox(height: 10,),
+              const SignUpOptions(),
+              const SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Already have an account?"),
+                  const SizedBox(width: 5,),
+                  GestureDetector(
+                      onTap: () => Get.toNamed(Routes.signInScreen),
+                      child: const Text(
+                        "Login",
+                        style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold,),
+                      )
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

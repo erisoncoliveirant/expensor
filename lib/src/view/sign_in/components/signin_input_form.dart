@@ -48,55 +48,6 @@ class SignInForm extends StatelessWidget {
             showPass: () => controller.showPassword.toggle(),
           ),
         ),
-        // const SizedBox(
-        //   height: 40,
-        // ),
-        // const Text(
-        //   '  Email',
-        //   style: TextStyle(
-        //       color: Colors.white,
-        //       fontWeight: FontWeight.w400,
-        //       fontSize: 17),
-        // ),
-        // const SizedBox(
-        //   height: 10,
-        // ),
-        // Obx(() => InputField(
-        //   onTap: () => controller.onFocusEmail(),
-        //   focus: controller.emailFocus.value,
-        //   hint: "tim@gmail.com",
-        //   controller: controller.email.value,
-        //   correct: controller.correctEmail.value,
-        //   onChange: controller.validateEmail,
-        // )),
-        // const SizedBox(
-        //   height: 20,
-        // ),
-        // const Text(
-        //   '  Password',
-        //   style: TextStyle(
-        //       color: Colors.white,
-        //       fontWeight: FontWeight.w400,
-        //       fontSize: 17),
-        // ),
-        // const SizedBox(
-        //   height: 10,
-        // ),
-        // Obx(
-        //       () => InputField(
-        //     onTap: () => controller.onFocusPassword(),
-        //     focus: controller.passwordFocus.value,
-        //     hint: "Pick a strong password",
-        //     controller: controller.password.value,
-        //     hideText: controller.showPassword.value,
-        //     onChange: () {
-        //     },
-        //     showPass: () => controller.showPassword.toggle(),
-        //   ),
-        // ),
-        // const SizedBox(
-        //   height: 40,
-        // ),
       ],
     );
   }

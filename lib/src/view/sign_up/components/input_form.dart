@@ -6,25 +6,27 @@ import '../../common_widgets/text_field.dart';
 
 class InputForm extends StatelessWidget {
    InputForm({super.key});
+
   final controller = Get.put(SignupController());
+
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(
-          height: 40,
+        Container(
+          alignment: Alignment.topLeft,
+          padding: const EdgeInsets.symmetric(horizontal: 0),
+          child: const Text(
+            "SING UP",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color(0xFF2661FA),
+              fontSize: 36,
+            ),
+            textAlign: TextAlign.left,
+          ),
         ),
-        const Text(
-          '  Name',
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w400,
-              fontSize: 17),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
+        const SizedBox(height: 30,),
         Obx(() => InputField(
           onTap: () => controller.onFocusName(),
           focus: controller.nameFocus.value,
@@ -32,18 +34,7 @@ class InputForm extends StatelessWidget {
           controller: controller.name.value,
           correct: controller.correctName.value,
           onChange: controller.validateName,
-        ),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        const Text(
-          '  Email',
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w400,
-              fontSize: 17),
-        ),
+        )),
         const SizedBox(
           height: 10,
         ),
@@ -56,31 +47,17 @@ class InputForm extends StatelessWidget {
           onChange: controller.validateEmail,
         )),
         const SizedBox(
-          height: 20,
-        ),
-        const Text(
-          '  Password',
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w400,
-              fontSize: 17),
-        ),
-        const SizedBox(
           height: 10,
         ),
         Obx(() => InputField(
-            onTap: () => controller.onFocusPassword(),
-            focus: controller.passwordFocus.value,
-            hint: "Pick a strong password",
-            controller: controller.password.value,
-            hideText: controller.showPassword.value,
-            onChange: () {},
-            showPass: () => controller.showPassword.toggle(),
-          ),
-        ),
-        const SizedBox(
-          height: 40,
-        ),
+          onTap: () => controller.onFocusPassword(),
+          focus: controller.passwordFocus.value,
+          hint: "Pick a strong password",
+          controller: controller.password.value,
+          hideText: controller.showPassword.value,
+          onChange: () {},
+          showPass: () => controller.showPassword.toggle(),
+        )),
       ],
     );
   }

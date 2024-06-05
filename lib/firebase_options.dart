@@ -46,6 +46,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '596861701516',
     projectId: 'expensor-8788c',
     authDomain: 'expensor-8788c.firebaseapp.com',
+    databaseURL: 'https://expensor-8788c-default-rtdb.firebaseio.com',
     storageBucket: 'expensor-8788c.appspot.com',
     measurementId: 'G-86GGQ65ET8',
   );
@@ -55,6 +56,7 @@ class DefaultFirebaseOptions {
     appId: '1:596861701516:android:dc10722c806f2f0a3d5aa9',
     messagingSenderId: '596861701516',
     projectId: 'expensor-8788c',
+    databaseURL: 'https://expensor-8788c-default-rtdb.firebaseio.com',
     storageBucket: 'expensor-8788c.appspot.com',
   );
 
@@ -63,6 +65,7 @@ class DefaultFirebaseOptions {
     appId: '1:596861701516:ios:c43c7a08b8017d9d3d5aa9',
     messagingSenderId: '596861701516',
     projectId: 'expensor-8788c',
+    databaseURL: 'https://expensor-8788c-default-rtdb.firebaseio.com',
     storageBucket: 'expensor-8788c.appspot.com',
     iosBundleId: 'com.testing.expensor',
   );

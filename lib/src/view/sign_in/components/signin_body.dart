@@ -9,6 +9,7 @@ import '../../sign_up/components/signup_options.dart';
 
 class SignInBody extends StatelessWidget {
   SignInBody({super.key});
+
   final controller = Get.put(SignInController());
 
   @override
@@ -42,10 +43,7 @@ class SignInBody extends StatelessWidget {
                           onTap: () => Get.toNamed(Routes.signUpScreen),
                           child: const Text(
                             "Sign Up",
-                            style: TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold,),
                           )
                         )
                       ],
